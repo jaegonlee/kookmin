@@ -1,12 +1,13 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
 
     public static ScoreManager instance; // 싱글톤 인스턴스
-    public TextMeshProUGUI scoreText; // 점수를 표시할 UI Text
-    
+    public Text scoreText; // 점수를 표시할 UI Text
+    int score = 0; // 점수 변수
+
     void Awake()
     {
         if (instance == null)
@@ -19,6 +20,10 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    public void AddScore(int amount)
+    {
+        // 점수를 계산하고 화면에 표시
+    }
+
 
 }
-
